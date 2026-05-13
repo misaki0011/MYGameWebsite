@@ -16,18 +16,65 @@
     <div class="container">
         <section class="hero">
             <h2>Our Games</h2>
+            
+            <div class="filters">
+                <div class="filter-group" id="platform-filters">
+                    <span class="filter-label">Platform:</span>
+                    <button class="filter-btn active" data-platform="all">All</button>
+                    <button class="filter-btn" data-platform="android">Android</button>
+                    <button class="filter-btn" data-platform="web">Web</button>
+                </div>
+                <div class="filter-group" id="genre-filters">
+                    <span class="filter-label">Genre:</span>
+                    <button class="filter-btn active" data-genre="all">All</button>
+                    <button class="filter-btn" data-genre="puzzle">Puzzle</button>
+                    <button class="filter-btn" data-genre="platformer">Platformer</button>
+                    <button class="filter-btn" data-genre="action">Action</button>
+                </div>
+            </div>
+
             <div class="app-grid">
                 <!-- Mergeimals Card -->
-                <a href="apps/mergeimals/index.html" class="app-card">
-                    <img src="images/final_1_red.png" alt="Mergeimals">
+                <a href="apps/mergeimals/index.html" class="app-card" data-platform="android" data-genre="puzzle">
+                    <img src="images/mergeimals/promo01.png" alt="Mergeimals" data-app-name="mergeimals">
                     <div class="app-card-content">
-                        <h3>Mergeimals: Shoot & Merge</h3>
+                        <h3 data-app-name="mergeimals">Mergeimals: Shoot & Merge</h3>
                         <p>A fun, billiards-style puzzle game where you merge cute animals!</p>
+                        <div class="tags">
+                            <span class="tag android">Android</span>
+                            <span class="tag puzzle">Puzzle</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Gravity Flip Card -->
+                <a href="apps/gravityflip/index.html" class="app-card" data-platform="web" data-genre="platformer">
+                    <img src="images/gravityflip/promo01.png" alt="Gravity Flip" data-app-name="gravityflip">
+                    <div class="app-card-content">
+                        <h3 data-app-name="gravityflip">Gravity Flip</h3>
+                        <p>Master gravity in this challenging platformer adventure!</p>
+                        <div class="tags">
+                            <span class="tag web">Web</span>
+                            <span class="tag platformer">Platformer</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Ninja Cat Tower Card -->
+                <a href="apps/climbing/index.html" class="app-card" data-platform="web" data-genre="action">
+                    <img src="images/climbing/promo01.png" alt="Ninja Cat Tower" data-app-name="climbing">
+                    <div class="app-card-content">
+                        <h3 data-app-name="climbing">Ninja Cat Tower</h3>
+                        <p>Test your reflexes in this fast-paced action game as you scale the world's tallest towers!</p>
+                        <div class="tags">
+                            <span class="tag web">Web</span>
+                            <span class="tag action">Action</span>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Placeholder for future games -->
-                <div class="app-card" style="opacity: 0.6; cursor: default;">
+                <div class="app-card" style="opacity: 0.6; cursor: default;" data-platform="" data-genre="">
                     <div style="height: 200px; background: #eee; display: flex; align-items: center; justify-content: center;">
                         <span>New Adventure Coming Soon</span>
                     </div>
@@ -47,5 +94,6 @@
             <a href="mailto:meeekestudio@gmail.com" class="contact-email">Contact Support</a>
         </div>
     </footer>
+    <script src="js/filters.js"></script>
 </body>
 </html>
