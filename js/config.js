@@ -1,7 +1,7 @@
 const APP_CONFIG = {
     climbing: "Ninja Cat Tower",
     gravityflip: "Gravity Flip Lab",
-    mergemals: "Mergemals: Shoot & Merge"
+    mergemals: "MERGEMALS: Shoot & Merge"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (el.tagName === 'IMG') {
                 el.alt = el.alt.replace(/.*Icon|.*Screenshot/i, (match) => appName + match.substring(match.indexOf(' ')));
                 // If alt is just the old name, replace it entirely
-                if (!el.alt || el.alt === "Climbing" || el.alt === "Gravity Flip" || el.alt === "Mergemals") {
+                if (!el.alt || el.alt === "Climbing" || el.alt === "Gravity Flip" || el.alt === "MERGEMALS") {
                     el.alt = appName;
                 }
             } else if (el.tagName === 'A' && el.getAttribute('href') === '#') {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Also update strong tags in descriptions if they exist
         document.querySelectorAll('strong').forEach(strong => {
-            if (APP_CONFIG[bodyAppKey] && (strong.textContent === "Climbing" || strong.textContent === "Gravity Flip" || strong.textContent === "Mergemals" || strong.textContent === "Ninja Cat Tower")) {
+            if (APP_CONFIG[bodyAppKey] && (strong.textContent === "Climbing" || strong.textContent === "Gravity Flip" || strong.textContent === "MERGEMALS" || strong.textContent === "Ninja Cat Tower")) {
                 strong.textContent = appName;
             }
         });

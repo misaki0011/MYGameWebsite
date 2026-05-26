@@ -3,97 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meeeke Studio | Mobile Games</title>
+    <meta name="description" content="Meeeke Studio portfolio of playful, polished mobile games and interactive Scratch game development tutorials.">
+    <title>Meeeke Studio | Games & Tutorials</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/config.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Meeeke Studio</h1>
-        <p>Creating playful and polished mobile experiences</p>
-    </header>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="app-sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="brand">
+                    <img src="icon.png" alt="Meeeke Studio Logo" class="brand-logo-img">
+                    <span class="brand-name">Meeeke Studio</span>
+                </a>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse Navigation Menu">
+                    <!-- Chevron Left SVG -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+            </div>
 
-    <div class="container">
-        <section class="hero">
-            <h2>Our Games</h2>
+            <div class="sidebar-nav">
+                <a class="nav-item active" id="nav-games" data-view="games-view">
+                    <!-- Games Icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.58 7.47c-.13-.25-.33-.46-.58-.58l-8-4a1.002 1.002 0 0 0-.99 0l-8 4c-.26.13-.46.33-.58.58A.996.996 0 0 0 3 8v8c0 .27.11.53.3.71l8 8c.18.18.43.29.7.29s.52-.11.71-.29l8-8c.18-.18.29-.44.29-.71V8c0-.2-.06-.39-.12-.53ZM12 4.14l6.03 3.01L12 10.16 5.97 7.15 12 4.14ZM5 9.4l6 3v7.3l-6-6V9.4Zm8 10.3v-7.3l6-3v7.3l-6 6Z"/>
+                    </svg>
+                    <span class="nav-item-text">Games</span>
+                </a>
+                <a class="nav-item" id="nav-tutorials" data-view="tutorials-view">
+                    <!-- Tutorials Icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3Zm0 14.54l-7.5-4.09v3.18L12 20.73l7.5-4.09v-3.18L12 17.54ZM12 12.3 5.4 8.7 12 5.1l6.6 3.6-6.6 3.6Z"/>
+                    </svg>
+                    <span class="nav-item-text">Scratch Tutorials</span>
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="sidebar-social">
+                <a href="https://meeeke.itch.io/" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="Visit Meeeke Studio on itch.io">
+                    <!-- itch.io icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.104 2.41 2.432 2.41h.024c1.328 0 2.432-1.102 2.432-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.105 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.622-2.08-2.99-3.13-3.612C19.948 1.002 13.005 0 12 0 10.995 0 4.052 1.002 3.13 1.338zm7.864 9.445c-1.08.01-2.25.355-3.072.961-2.858 2.072-3.514 6.02-3.514 9.642 0 .195.003.386.009.573C4.43 22.48 5.81 24 7.3 24c2.045 0 3.532-1.315 4.7-2.963C13.168 22.685 14.655 24 16.7 24c1.49 0 2.87-1.52 2.883-2.04.006-.188.009-.38.009-.575 0-3.622-.657-7.57-3.515-9.642-.93-.674-2.2-1-3.355-.96h-.728z"/>
+                    </svg>
+                    <span class="nav-item-text">itch.io</span>
+                </a>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="privacy/index.html">Privacy Policy</a>
+                <a href="mailto:meeekestudio@gmail.com" class="contact-email">Contact Support</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
             
-            <div class="filters">
-                <div class="filter-group" id="platform-filters">
-                    <span class="filter-label">Platform:</span>
-                    <button class="filter-btn active" data-platform="all">All</button>
-                    <button class="filter-btn" data-platform="android">Android</button>
-                    <button class="filter-btn" data-platform="web">Web</button>
-                </div>
-                <div class="filter-group" id="genre-filters">
-                    <span class="filter-label">Genre:</span>
-                    <button class="filter-btn active" data-genre="all">All</button>
-                    <button class="filter-btn" data-genre="puzzle">Puzzle</button>
-                    <button class="filter-btn" data-genre="platformer">Platformer</button>
-                    <button class="filter-btn" data-genre="action">Action</button>
-                </div>
+            <!-- GAMES VIEW (Default) -->
+            <div class="content-view" id="games-view">
+                <section class="hero">
+                    <h2>Our Games</h2>
+                    <p class="hero-subtitle">Creating playful and polished mobile experiences</p>
+                </section>
+                
+                <section class="filters-section">
+                    <div class="filters">
+                        <div class="filter-group" id="genre-filters">
+                            <span class="filter-label">Genre:</span>
+                            <button class="filter-btn active" data-genre="all">All</button>
+                            <button class="filter-btn" data-genre="puzzle">Puzzle</button>
+                            <button class="filter-btn" data-genre="platformer">Platformer</button>
+                            <button class="filter-btn" data-genre="action">Action</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="games-grid-section">
+                    <div class="app-grid">
+                        <!-- MERGEMALS Card -->
+                        <a href="apps/mergemals/index.html" class="app-card" data-platform="android" data-genre="puzzle" id="game-card-mergemals">
+                            <img src="images/mergemals/promo01.png" alt="MERGEMALS: Shoot & Merge" data-app-name="mergemals">
+                            <div class="app-card-content">
+                                <h3 data-app-name="mergemals">MERGEMALS: Shoot & Merge</h3>
+                                <p>A fun, billiards-style puzzle game where you merge cute animals!</p>
+                                <div class="tags">
+                                    <span class="tag puzzle">Puzzle</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Gravity Flip Card -->
+                        <a href="apps/gravityflip/index.html" class="app-card" data-platform="web" data-genre="platformer" id="game-card-gravityflip">
+                            <img src="images/gravityflip/promo01.png" alt="Gravity Flip" data-app-name="gravityflip">
+                            <div class="app-card-content">
+                                <h3 data-app-name="gravityflip">Gravity Flip</h3>
+                                <p>Master gravity in this challenging platformer adventure!</p>
+                                <div class="tags">
+                                    <span class="tag platformer">Platformer</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Ninja Cat Tower Card -->
+                        <a href="apps/climbing/index.html" class="app-card" data-platform="web" data-genre="action" id="game-card-climbing">
+                            <img src="images/climbing/promo01.png" alt="Ninja Cat Tower" data-app-name="climbing">
+                            <div class="app-card-content">
+                                <h3 data-app-name="climbing">Ninja Cat Tower</h3>
+                                <p>Test your reflexes in this fast-paced action game as you scale the world's tallest towers!</p>
+                                <div class="tags">
+                                    <span class="tag action">Action</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Placeholder for future games -->
+                        <div class="app-card" style="opacity: 0.6; cursor: default;" data-platform="" data-genre="" id="game-card-placeholder">
+                            <div style="height: 200px; background: rgba(255, 255, 255, 0.05); display: flex; align-items: center; justify-content: center;">
+                                <span style="color: var(--text-secondary);">New Adventure Coming Soon</span>
+                            </div>
+                            <div class="app-card-content">
+                                <h3>Future Project</h3>
+                                <p>Stay tuned for our next exciting release!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="content-footer">
+                    <p>&copy; <span class="current-year">2026</span> Meeeke Studio. All rights reserved.</p>
+                </footer>
             </div>
 
-            <div class="app-grid">
-                <!-- Mergemals Card -->
-                <a href="apps/mergemals/index.html" class="app-card" data-platform="android" data-genre="puzzle">
-                    <img src="images/mergemals/promo01.png" alt="Mergemals" data-app-name="mergemals">
-                    <div class="app-card-content">
-                        <h3 data-app-name="mergemals">Mergemals: Shoot & Merge</h3>
-                        <p>A fun, billiards-style puzzle game where you merge cute animals!</p>
-                        <div class="tags">
-                            <span class="tag android">Android</span>
-                            <span class="tag puzzle">Puzzle</span>
+            <!-- SCRATCH TUTORIALS VIEW -->
+            <div class="content-view hidden" id="tutorials-view">
+                <section class="hero">
+                    <h2>Scratch Tutorials</h2>
+                    <p class="hero-subtitle">Learn game development techniques with Scratch YouTube guides!</p>
+                </section>
+
+                <section class="filters-section">
+                    <div class="filters">
+                        <div class="filter-group" id="tutorial-genre-filters">
+                            <span class="filter-label">Genre:</span>
+                            <button class="filter-btn active" data-genre="all">All</button>
+                            <button class="filter-btn" data-genre="platformer">Platformer</button>
+                            <button class="filter-btn" data-genre="puzzle">Puzzle</button>
+                            <button class="filter-btn" data-genre="action">Action</button>
+                            <button class="filter-btn" data-genre="life">Life</button>
+                        </div>
+                        <div class="filter-group" id="tutorial-level-filters">
+                            <span class="filter-label">Level:</span>
+                            <button class="filter-btn active" data-level="all">All</button>
+                            <button class="filter-btn" data-level="easy">Easy</button>
+                            <button class="filter-btn" data-level="middle">Middle</button>
+                            <button class="filter-btn" data-level="hard">Hard</button>
                         </div>
                     </div>
-                </a>
+                </section>
 
-                <!-- Gravity Flip Card -->
-                <a href="apps/gravityflip/index.html" class="app-card" data-platform="web" data-genre="platformer">
-                    <img src="images/gravityflip/promo01.png" alt="Gravity Flip" data-app-name="gravityflip">
-                    <div class="app-card-content">
-                        <h3 data-app-name="gravityflip">Gravity Flip</h3>
-                        <p>Master gravity in this challenging platformer adventure!</p>
-                        <div class="tags">
-                            <span class="tag web">Web</span>
-                            <span class="tag platformer">Platformer</span>
+                <section class="tutorials-grid-section">
+                    <div class="tutorial-grid">
+                        <!-- Side-Scroller Platformer Card -->
+                        <div class="video-card" id="tutorial-card-mario" data-genre="platformer" data-level="easy,hard">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/pmoCcmQekyw" title="Scratch Tutorial: Mario-style Platformer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-card-content">
+                                <h3>Mario-style Platformer Guide</h3>
+                                <p>Build a classic side-scrolling platformer with smooth movement, jump physics, animations, and level design.</p>
+                                <div class="tags">
+                                    <span class="tag platformer">Platformer</span>
+                                    <span class="tag easy">Easy</span>
+                                    <span class="tag hard">Hard</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fruit Drop Puzzle Card -->
+                        <div class="video-card" id="tutorial-card-suika" data-genre="puzzle" data-level="easy,hard">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/MfsgNoToi2I" title="Scratch Tutorial: Suika-style Puzzle Game" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-card-content">
+                                <h3>Suika-style Physics Puzzle</h3>
+                                <p>Create a fruit-drop puzzle game. Implement custom gravity, drop/collision physics, and fruit merging mechanics.</p>
+                                <div class="tags">
+                                    <span class="tag puzzle">Puzzle</span>
+                                    <span class="tag easy">Easy</span>
+                                    <span class="tag hard">Hard</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gravity Flip Card -->
+                        <div class="video-card" id="tutorial-card-gravity-flip" data-genre="action" data-level="middle">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/YrYF0mu76I8" title="Scratch Tutorial: Gravity Flip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-card-content">
+                                <h3>Gravity Flip Mechanic</h3>
+                                <p>Master gravity manipulation. Design challenges, obstacle courses, and camera scrolling triggered by flipping gravity upside down.</p>
+                                <div class="tags">
+                                    <span class="tag action">Action</span>
+                                    <span class="tag middle">Middle</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Horror Game Card -->
+                        <div class="video-card" id="tutorial-card-horror" data-genre="action" data-level="middle">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/KrRX9wOL5KQ" title="Scratch Tutorial: Horror Game" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-card-content">
+                                <h3>Atmospheric Horror Game</h3>
+                                <p>Create immersive, spooky environments. Program custom lighting / flashlight cone effects, jumpscare triggers, and creepy AI paths.</p>
+                                <div class="tags">
+                                    <span class="tag action">Action</span>
+                                    <span class="tag middle">Middle</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dress-Up Card -->
+                        <div class="video-card" id="tutorial-card-dressup" data-genre="life" data-level="easy">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/4iGPxGoQK6A" title="Scratch Tutorial: Dress-Up Game" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-card-content">
+                                <h3>Custom Dress-Up & UI</h3>
+                                <p>Learn drag-and-drop mechanics, costume indexing, customized UI layers, and clothing options to build a complete fashion game.</p>
+                                <div class="tags">
+                                    <span class="tag life">Life</span>
+                                    <span class="tag easy">Easy</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </a>
+                </section>
 
-                <!-- Ninja Cat Tower Card -->
-                <a href="apps/climbing/index.html" class="app-card" data-platform="web" data-genre="action">
-                    <img src="images/climbing/promo01.png" alt="Ninja Cat Tower" data-app-name="climbing">
-                    <div class="app-card-content">
-                        <h3 data-app-name="climbing">Ninja Cat Tower</h3>
-                        <p>Test your reflexes in this fast-paced action game as you scale the world's tallest towers!</p>
-                        <div class="tags">
-                            <span class="tag web">Web</span>
-                            <span class="tag action">Action</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Placeholder for future games -->
-                <div class="app-card" style="opacity: 0.6; cursor: default;" data-platform="" data-genre="">
-                    <div style="height: 200px; background: #eee; display: flex; align-items: center; justify-content: center;">
-                        <span>New Adventure Coming Soon</span>
-                    </div>
-                    <div class="app-card-content">
-                        <h3>Future Project</h3>
-                        <p>Stay tuned for our next exciting release!</p>
-                    </div>
-                </div>
+                <footer class="content-footer">
+                    <p>&copy; <span class="current-year">2026</span> Meeeke Studio. All rights reserved.</p>
+                </footer>
             </div>
-        </section>
+            
+        </main>
     </div>
-
-    <footer>
-        <p>&copy; <span class="current-year">2024</span> Meeeke Studio</p>
-        <div class="nav-links">
-            <a href="privacy/index.html">Privacy Policy</a>
-            <a href="mailto:meeekestudio@gmail.com" class="contact-email">Contact Support</a>
-        </div>
-    </footer>
+    
     <script src="js/filters.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>
