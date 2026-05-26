@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /apps/mergemals/
+Disallow: /privacy/
+Disallow: /apps/gravityflip/
+Disallow: /apps/climbing/
+
+Sitemap: https://misaki0011.github.io/MYGameWebsite/sitemap.xml
