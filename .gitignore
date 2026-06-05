@@ -1,2 +1,28 @@
-# Antigravity CLI workspace files
-.antigravitycli/
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.mypy_cache/
+
+# Credentials & Environment
+.env
+token.pickle
+*.pickle
+
+# Media Files
+*.mp3
+*.wav
+*.mp4
+*.m4a
+*.flac
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+AGENTS.md
